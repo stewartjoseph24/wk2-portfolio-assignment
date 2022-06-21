@@ -8,14 +8,25 @@ body {
 
 header {
     font-size: 60px;
-    background-color: var(--primary);
-    display: flex;
+    background-color: grey;
     font-family: 'Anek Malayalam', sans-serif;
     color:azure;
-    justify-content: flex-end;
+}
+
+header h1{
+    font-size: 50px;
+    background-color: var(--primary);
+    display: inline;
 }
 
 header p {
     font-size: 40px;
-    border: 10px var(--secondary);
+}
+
+header li {
+    font-size: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-flow: row wrap;
 }
