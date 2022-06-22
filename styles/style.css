@@ -1,32 +1,87 @@
 :root {
     --primary: #800080;
-    --secondary: rgb (0 255 0);
+    --secondary: rgb(45, 41, 48);
 }
+
 body {
     font-size: 36px;
+    font-family: 'Anek Malayalam', sans-serif;
 }
 
 header {
     font-size: 60px;
-    background-color: grey;
-    font-family: 'Anek Malayalam', sans-serif;
-    color:azure;
+    background-color: var(--secondary);
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1{
     font-size: 50px;
     background-color: var(--primary);
-    display: inline;
+    width: 15%;
+    text-align: end;
+    padding-right: 15px;
 }
 
-header p {
-    font-size: 40px;
-}
-
-header li {
+header ul {
+    margin: none;
     font-size: 30px;
     list-style: none;
     display: flex;
-    justify-content: end;
-    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+header li {
+    margin: 20px;
+}
+
+header a {
+    color:var(--primary);
+    font-weight: 900;
+}
+h2 {
+    font-size: 50px;
+    color: var(--primary);
+}
+
+#hero {
+    width:100%;
+    max-height: 250px;
+}
+
+figure {
+    display: flex;
+    margin: 0;
+}
+
+figure p {
+    position: absolute;
+    right: 25px;
+    margin-top: 150px;
+    color: white;
+    background-color: var(--secondary);
+    padding: 15px;
+}
+
+.contentBox {
+    display: flex;
+}
+
+.contentBox h2 {
+    padding: 30px 15px 50px 150px;
+    display: inline-flex;
+    text-align: left;
+}
+
+.abMeP {
+    font-size: 24px;
+    padding: 25px;
+}
+
+.abMeP p {
+    border-left: 5px solid black;
+    padding-bottom: 40px;
+    padding-left: 25px;
 }
