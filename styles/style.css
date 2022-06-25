@@ -1,10 +1,11 @@
+/* Variables for main colors used */
 :root {
     --primary: #800080;
     --secondary: rgb(45, 41, 48);
 }
 
+/* Sets the main font for my page as well as a backup */
 body {
-    font-size: 36px;
     font-family: 'Anek Malayalam', sans-serif;
 }
 
@@ -17,6 +18,7 @@ header {
     align-items: center;
 }
 
+/* Formatting for my name at the top of my page*/
 header h1{
     font-size: 50px;
     background-color: var(--primary);
@@ -33,30 +35,41 @@ header ul {
     justify-content: flex-end;
 }
 
+/* spaces out the buttons on my navbar */
 header li {
     margin: 20px;
 }
 
+/* changes the color of my links */
 header a {
     color:var(--primary);
     font-weight: 900;
 }
+
+/* Formatting for the main titles of my sections */
 h2 {
     font-size: 50px;
     color: var(--primary);
+    padding: 30px 15px 50px 150px;
+    display: inline-flex;
+    text-align: left;
 }
 
-#hero {
-    width:100%;
+/* Formatting for the image under the nav bar */
+#headImg {
+    display: flex;
+    margin: 0;
     max-height: 250px;
 }
 
-figure {
-    display: flex;
-    margin: 0;
+/* Targeting the IMG element is necessary because otherwise the width will not be applied properly */
+#headImg img{
+    max-width: 100%;
 }
 
-figure p {
+/* formatting for the subtitle embedded in the figure*/
+#headImg p {
+    font-size: 36px;
     position: absolute;
     right: 25px;
     margin-top: 150px;
@@ -65,23 +78,61 @@ figure p {
     padding: 15px;
 }
 
+/* Creates parent flexbox */
 .contentBox {
     display: flex;
 }
 
-.contentBox h2 {
-    padding: 30px 15px 50px 150px;
-    display: inline-flex;
-    text-align: left;
-}
-
+/* formatting for the parent element of the body paragraphs in about me section */
 .abMeP {
     font-size: 24px;
     padding: 25px;
 }
 
+/* for paragraphs in About me section - Must be separated to properly format the line between h2 and paragraphs*/
 .abMeP p {
     border-left: 5px solid black;
     padding-bottom: 40px;
     padding-left: 25px;
+}
+
+/* ID of big flexbox which placeholder work cards will be stored in */
+.workFlex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    border-left: 5px solid black;
+    padding:25px;
+    margin-left: 45px;
+}
+
+.workCard{
+    padding: 15;
+    max-width: 40%;
+    display: flex;
+}
+
+.workCard img{
+    border: 7px solid var(--primary);
+    max-width: 100%;
+}
+
+.workFlex .workCard h3{
+    position: absolute;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    color: white;  
+    background-color: var(--primary);
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.workFlex .workCard h3 p{
+    font-size: 14px;
+    font-weight: 0;
+}
+
+.workFlex #hero{
+    min-width: 100%;
+    min-height: 100%;
 }
