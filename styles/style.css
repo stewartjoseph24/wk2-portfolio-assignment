@@ -1,11 +1,13 @@
 /* Variables for main colors used */
 :root {
-    --primary: #800080;
+    --primary: #a115a1;
     --secondary: rgb(45, 41, 48);
+    --divider: 5px solid var(--secondary);
 }
 
 /* Sets the main font for my page as well as a backup */
 body {
+    background-color: rgb(221, 221, 221);
     font-family: 'Anek Malayalam', sans-serif;
 }
 
@@ -27,7 +29,14 @@ header h1{
     padding-right: 15px;
 }
 
-header ul {
+footer{
+    background-color: var(--secondary);
+    font-size: 80px;
+    color: var(--primary);
+    text-align: center;
+}
+
+ul {
     margin: none;
     font-size: 30px;
     list-style: none;
@@ -43,7 +52,11 @@ header li {
 /* changes the color of my links */
 header a {
     color:var(--primary);
-    font-weight: 900;
+    font-weight: 200;
+}
+
+header a:hover {
+    font-weight:900;
 }
 
 /* Formatting for the main titles of my sections */
@@ -52,7 +65,7 @@ h2 {
     color: var(--primary);
     padding: 30px 15px 50px 150px;
     display: inline-flex;
-    text-align: left;
+    text-align: right;
 }
 
 /* Formatting for the image under the nav bar */
@@ -91,7 +104,7 @@ h2 {
 
 /* for paragraphs in About me section - Must be separated to properly format the line between h2 and paragraphs*/
 .abMeP p {
-    border-left: 5px solid black;
+    border-left: var(--divider);
     padding-bottom: 40px;
     padding-left: 25px;
 }
@@ -100,21 +113,28 @@ h2 {
 .workFlex{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    border-left: 5px solid black;
+    justify-content: center;
+    border-left:  var(--divider);
     padding:25px;
     margin-left: 45px;
+    margin-bottom: 50px;
 }
 
 .workCard{
+    border: 7px solid var(--primary);
     padding: 15;
-    max-width: 40%;
+    max-width: 39%;
     display: flex;
+    align-items: flex-end;
+}
+
+.workCard img:hover{
+    opacity: 100%;
 }
 
 .workCard img{
-    border: 7px solid var(--primary);
-    max-width: 100%;
+    opacity: 70%;
+    max-width: 100%;  
 }
 
 .workFlex .workCard h3{
@@ -130,9 +150,36 @@ h2 {
 .workFlex .workCard h3 p{
     font-size: 14px;
     font-weight: 0;
+    font-style: italic;
 }
 
 .workFlex #hero{
-    min-width: 100%;
+    min-width: 83%;
     min-height: 100%;
+}
+
+#contactInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: var(--divider);
+    font-size: 36px;
+}
+
+#contactInfo li{
+    margin:0px 40px;
+    padding: 7px;
+    border-bottom: 5px solid var(--primary);
+}
+
+#contactInfo li a{
+    text-decoration: none;
+}
+
+#contactInfo li a:hover{
+    font-weight: 900;
+}
+
+#contact{
+    padding-left: 67px;
 }
